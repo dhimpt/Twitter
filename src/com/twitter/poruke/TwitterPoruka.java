@@ -12,8 +12,7 @@ public class TwitterPoruka {
 
 	/**
 	 * Metoda koja vraca naziv korisnika
-	 * 
-	 * @return
+	 * @return korisnik
 	 */
 	public String getKorisnik() {
 		return korisnik;
@@ -22,7 +21,6 @@ public class TwitterPoruka {
 	/**
 	 * Metoda koja upisuje naziv korisnika koji je prosledjen kao parametar
 	 * (korisnicko ime)
-	 * 
 	 * @param korisnik
 	 */
 	public void setKorisnik(String korisnik) {
@@ -42,7 +40,6 @@ public class TwitterPoruka {
 
 	/**
 	 * Metoda koja upisuje sadrzaj poruke koji je prosledjen kao parametar
-	 * 
 	 * @param poruka
 	 */
 	public void setPoruka(String poruka) {
