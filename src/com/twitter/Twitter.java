@@ -18,7 +18,7 @@ public class Twitter {
 		/**
 		 * Inicijalizuje se korisnik poruke kao "korisnik"
 		 */
-		tp.setKorisnik("korisnik");
+		tp.setKorisnik(korisnik);
 		/**
 		 * Inicijalizuje se poruka korisnika
 		 */
@@ -54,8 +54,7 @@ public class Twitter {
 		for (int i = 0; i < poruke.size(); i++)
 			if (poruke.get(i).getPoruka().indexOf(tag) != -1)
 				if (brojac < maxBroj) {
-					rezultat[brojac + 1] = poruke.get(i);
-					brojac++;
+					rezultat[brojac++] = poruke.get(i);
 				} else
 					break;
 		return rezultat;
