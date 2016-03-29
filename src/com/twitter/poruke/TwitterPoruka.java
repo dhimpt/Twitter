@@ -1,46 +1,57 @@
 package com.twitter.poruke;
 
+/**
+ * Predstavalja (sarzi) podatke o korisniku i poruci koju je uneo
+ * 
+ * @author dhimpt
+ */
 public class TwitterPoruka {
 	/**
-	 * Atribut koji pamti podatke o nazivu korisnika (korisnicko ime)
+	 * Naziv korisnika (korisnicko ime) kao String
 	 */
 	private String korisnik;
 	/**
-	 * Atribut koji pamti sadrzaj poruke koju korisnik salje
+	 * Sadrzaj poruke koju korisnik salje kao String
 	 */
 	private String poruka;
 
 	/**
-	 * Metoda koja vraca naziv korisnika
-	 * @return korisnik
+	 * Metoda koja vraca vrednost atributa korisnik
+	 * 
+	 * @return korisnik Vraca podatke o korisniku koji je napisao poruku
 	 */
 	public String getKorisnik() {
 		return korisnik;
 	}
 
 	/**
-	 * Metoda koja upisuje naziv korisnika koji je prosledjen kao parametar
-	 * (korisnicko ime)
+	 * Postavlja novu vrednost za atribut korisnik (korisnicko ime)
+	 * 
 	 * @param korisnik
+	 *            Ime korisnika
+	 * @throws java.lang.RuntimeException
+	 *             Ako nije uneto ime korisnika
 	 */
 	public void setKorisnik(String korisnik) {
-		if (korisnik == null || korisnik == "")
+		if (korisnik == null || korisnik.equals(""))
 			throw new RuntimeException("Ime korisnika mora biti uneto");
 		this.korisnik = korisnik;
 	}
 
 	/**
-	 * Metoda koja vraca String "poruka"
+	 * Metoda koja vraca vrednost atributa poruka
 	 * 
-	 * @return "poruka"
+	 * @return poruka Poruka koju je uneo korisnik
 	 */
 	public String getPoruka() {
 		return poruka;
 	}
 
 	/**
-	 * Metoda koja upisuje sadrzaj poruke koji je prosledjen kao parametar
+	 * Postavlja vrednost atributa poruka
+	 * 
 	 * @param poruka
+	 *            Poruka napisana od strane korisnika
 	 */
 	public void setPoruka(String poruka) {
 		if (poruka == null || poruka.length() > 140)
@@ -49,7 +60,7 @@ public class TwitterPoruka {
 	}
 
 	/**
-	 * Metoda toString koja konvertuje sadrzaj objekta u String
+	 * Konvertuje sadrzaj objekta u String
 	 */
 	public String toString() {
 		return "KORISNIK:" + korisnik + " PORUKA:" + poruka;
@@ -76,5 +87,5 @@ public class TwitterPoruka {
 			return false;
 		return true;
 	}
-	
+
 }

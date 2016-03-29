@@ -32,11 +32,6 @@ public class TwitterPorukaTest {
 	}
 
 	@Test
-	public void testGetKorisnik() {
-
-	}
-
-	@Test
 	public void testSetKorisnik() {
 		tp.setKorisnik("Pera");
 		assertEquals(tp.getKorisnik(), "Pera");
@@ -46,16 +41,11 @@ public class TwitterPorukaTest {
 	public void testSetKorisnikNull() {
 		tp.setKorisnik(null);
 	}
-
+	
 	@Test(expected = java.lang.RuntimeException.class)
-	public void testSetKorisnikPrazanString() {
-		tp.setKorisnik("");
-	}
-
-	@Test
-	public void testGetPoruka() {
-
-	}
+    public void testSetKorisnikPrazanString() {
+        tp.setKorisnik(new String(""));
+    }
 
 	@Test
 	public void testSetPoruka() {
@@ -67,15 +57,11 @@ public class TwitterPorukaTest {
 	public void testSetPorukaSaViseKarakteraOdBrojaDozvoljenih() {
 		tp.setPoruka(
 				"Ova poruka je duza od 140 karaktera i ona ne dozvoljava ponovni unos nove poruke koja ce je zameniti tj. ako izvrsimo unos ove poruke necemo biti u mogucnosti da upisemo novu poruku!");
-
-		assertEquals(tp.getPoruka(),
-				"Ova poruka je duza od 140 karaktera i ona ne dozvoljava ponovni unos nove poruke koja ce je zameniti tj. ako izvrsimo unos ove poruke necemo biti u mogucnosti da upisemo novu poruku!");
 	}
 
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetPorukaNull() {
 		tp.setPoruka(null);
-		assertEquals(tp.getPoruka(), null);
 	}
 
 	@Test

@@ -64,9 +64,9 @@ public class TwitterTest {
 	}
 
 	@Test(expected = java.lang.RuntimeException.class)
-	public void testVratiPorukeTagJePrazanString() {
-		tw.vratiPoruke(10, "");
-	}
+    public void testVratiPorukeTagJePrazanString() {
+        tw.vratiPoruke(10, new String(""));
+    }
 
 	@Test
 	public void testVratiPorukeBrojJeNula() {
